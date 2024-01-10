@@ -20,6 +20,10 @@ export function New(){
     setNewLink("")
   }
 
+  function handleRemoveLink (deleted){
+    SetLinks(prevState => prevState.filter(link => link !== deleted))
+  }
+
   return (
     <Container>
       <Header />
@@ -35,9 +39,9 @@ export function New(){
           <Section title="Links úteis">
             {links.map((link, index) => (
               <NoteItem
-              key={String(index)}
-              value={link}
-              onClick={()=> {}}
+                key={String(index)}
+                value={link}
+                onClick={() => handleRemoveLink(link)}
               />
             ))}
             <NoteItem
