@@ -1,51 +1,63 @@
-import { Header } from '../../components/Header'
-import { Input } from '../../components/Input'
+import { Header } from "../../components/Header"
+import { Input } from "../../components/Input"
 import { Textarea } from "../../components/Textarea"
 import { NoteItem } from "../../components/NoteItem"
 import { Section } from "../../components/Section"
 import { Button } from "../../components/Button"
 import { Link } from "react-router-dom"
-import { useState } from 'react'
-import { api } from'../../services/api'
-import { useNavigate } from 'react-router-dom'
+import { useState } from "react"
+import { api } from "../../services/api"
+import { useNavigate } from "react-router-dom"
 
+import { Container, Form } from "./styles"
 
-import { Container, Form } from './styles'
-
-export function New(){
-
+export function New() {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
- 
 
   const [links, SetLinks] = useState([])
   const [newLink, setNewLink] = useState("")
 
-   const [tags, setTags] = useState([])
-   const [newTag, setNewTag] = useState("")
+  const [tags, setTags] = useState([])
+  const [newTag, setNewTag] = useState("")
 
-   const navigate = useNavigate()
+  const navigate = useNavigate()
 
-  function handleAddLink (){
-    SetLinks(prevState => [...prevState, newLink])
+  function handleAddLink() {
+    SetLinks((prevState) => [...prevState, newLink])
     setNewLink("")
   }
 
-  function handleRemoveLink (deleted){
-    SetLinks(prevState => prevState.filter(link => link !== deleted))
+  function handleRemoveLink(deleted) {
+    SetLinks((prevState) => prevState.filter((link) => link !== deleted))
   }
 
-  function handleAddTag(){
-    setTags(prevState => [...prevState, newTag])
+  function handleAddTag() {
+    setTags((prevState) => [...prevState, newTag])
     setNewTag("")
   }
 
-  function handleRemoveTag (deleted){
-    setTags(prevState => prevState.filter(tag => tag !== deleted))
+  function handleRemoveTag(deleted) {
+    setTags((prevState) => prevState.filter((tag) => tag !== deleted))
   }
 
-  async function handleNewNote(){
-    await api.post("/notes", {title, description, tags, links})
+  async function handleNewNote() {
+    if (!title) {
+      return alert("Preencha o título da nota")
+    }
+  
+    if (newLink) {
+      return alert(
+        "Você não adicionou o link, click para adicionar ou deixe o campo vazio"
+        )
+      }
+      if (newTag) {
+        return alert(
+          "Você não adicionou a tag, click para adicionar ou deixe o campo vazio"
+        )
+      }
+
+    await api.post("/notes", { title, description, tags, links })
     alert("Nota criada com sucesso")
     navigate("/")
   }
