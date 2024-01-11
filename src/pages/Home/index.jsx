@@ -32,10 +32,11 @@ export function Home() {
         <li>
           <ButtonText 
           title="Todos" 
-          isActive />
+          isActive
+          />
         </li>
-        {tags &&
-          tags.map((tag) => (
+        {
+        tags && tags.map((tag) => (
             <li key={String(tag.id)}>
               <ButtonText title={tag.name} />
             </li>
