@@ -2,6 +2,8 @@
 
 Bem-vindo ao RocketNotes - Sua aplicação de notas incrível!
 
+ > Status: developing 🚧
+
  <img src="./src/assets/Captura de tela 2024-01-13 132447.png">
   <img src="./src//assets/Captura de tela 2024-01-13 133335.png">
 
@@ -26,11 +28,6 @@ RocketNotes é um projeto front-end desenvolvido para proporcionar uma experiên
 - **react-icons**: Biblioteca de ícones para React.
 - **react-router-dom**: Roteamento para navegação entre páginas.
 
-## Como Iniciar
-
-1. Clone este repositório: `git clone https://github.com/seu-usuario/rocketnotes.git`
-2. Instale as dependências: `npm install`
-3. Inicie o projeto: `npm run dev`
 
 ## Estrutura de Diretórios
 
