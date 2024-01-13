@@ -2,19 +2,40 @@ import styled from "styled-components";
 import { Link } from "react-router-dom"
 
 
-export const Container = styled.div `
-width: 100%;
-height: 100vh;
-display: grid;
-grid-template-columns: 250px auto;
-grid-template-rows: 105px 128px auto 64px;
-grid-template-areas: 
-"brand header"
-"menu search"
-"menu content"
-"newnote content";
+export const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 105px 128px auto 64px;
+  grid-template-areas:
+    "brand header"
+    "menu search"
+    "menu content"
+    "newnote content";
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff9000 #312e38;
+  }
 
-background: ${({theme})=> theme.COLORS.BACKGROUND_800};
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #312e38;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff9000;
+    border-radius: 10px;
+    border: 3px solid #ff9000;
+  }
+
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `
 export const Brand = styled.div`
   grid-area: brand;
@@ -52,25 +73,12 @@ export const Content = styled.div`
   padding: 0 64px;
   overflow-y: auto;
 
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-    scrollbar-width: auto;
-    scrollbar-color: #6e3e07 #312e38;
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
+  h1{
+    font-size: 20px;
+    font-weight: 500;
   }
+ 
 
-  *::-webkit-scrollbar-track {
-    background: #312e38;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #6e3e07;
-    border-radius: 10px;
-    border: 3px solid #312e38;
-  }
 `
 
 export const NewNote = styled(Link)`

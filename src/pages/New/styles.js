@@ -9,16 +9,37 @@ export const Container = styled.div`
   grid-template-areas:
     "header"
     "content";
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff9000 #312e38;
+  }
 
-    >main{
-      grid-area: content;
-      overflow-y: auto;
-    }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #312e38;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff9000;
+    border-radius: 10px;
+    border: 3px solid #ff9000;
+  }
+
+  > main {
+    grid-area: content;
+    overflow-y: auto;
+  }
 
   .marcador {
     display: flex;
     justify-content: space-between;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   }
 `
 export const Form = styled.form`

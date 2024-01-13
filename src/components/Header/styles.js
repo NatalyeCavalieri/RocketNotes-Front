@@ -22,8 +22,8 @@ export const Profile = styled(Link)`
   align-items: center;
 
   > img {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -52,6 +52,6 @@ background: none;
 
 >svg{
   color: ${({theme})=> theme.COLORS.GRAY_100};
-  font-size: 36px;
+  font-size: 30px;
 }
 `

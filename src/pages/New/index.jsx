@@ -100,7 +100,7 @@ export function New() {
               onClick={handleAddLink}
             />
           </Section>
-          <Section title="Marcadores">
+          <Section title="Tags">
             <div className="marcador">
               {tags.map((tag, index) => (
                 <NoteItem
@@ -110,7 +110,7 @@ export function New() {
                 />
               ))}
               <NoteItem
-                placeholder="Novo marcador"
+                placeholder="Nova tag"
                 isNew
                 onChange={(e) => setNewTag(e.target.value)}
                 value={newTag}
