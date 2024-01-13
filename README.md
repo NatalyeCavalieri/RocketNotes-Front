@@ -3,7 +3,8 @@
 
 Bem-vindo ao RocketNotes - Sua aplicação de notas incrível!
 
- <img src="./src/assets/WhatsApp Image 2024-01-13 at 13.42.12.jpeg">
+ <img src="./src/assets/Captura de tela 2024-01-13 132447.png">
+  <img src="./src//assets/Captura de tela 2024-01-13 133335.png">
 
 ## Visão Geral do Projeto
 
