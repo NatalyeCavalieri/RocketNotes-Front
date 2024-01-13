@@ -1,5 +1,4 @@
-# <div style="text-align: center;">RocketNotes</div>
-
+ <h1 align= "center">RocketNotes</h1>
 
 Bem-vindo ao RocketNotes - Sua aplicação de notas incrível!
 
@@ -58,7 +57,5 @@ As rotas estão definidas no arquivo `src/routes.jsx`. Há rotas específicas pa
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
 
-## Licença
 
-Este projeto é licenciado sob a [Licença XYZ]. Consulte o arquivo LICENSE.md para obter mais detalhes.
 
