@@ -1,58 +1,41 @@
- <h1 align= "center">RocketNotes</h1>
+<h1 align="center">RocketNotes Backend</h1>
 
-Bem-vindo ao RocketNotes - Sua aplicação de notas incrível!
+Welcome to the RocketNotes backend - Your amazing note-taking application!
 
- > Status: developing 🚧
+> Status: developing 🚧
 
- <img src="./src/assets/Captura de tela 2024-01-13 132447.png">
-  <img src="./src//assets/Captura de tela 2024-01-13 133335.png">
+## Project Overview
 
-## Visão Geral do Projeto
+The RocketNotes backend is responsible for managing storage, authentication, and data manipulation related to user notes.
 
-RocketNotes é um projeto front-end desenvolvido para proporcionar uma experiência eficiente e agradável na criação e organização de notas. A interface simples e intuitiva permite aos usuários gerenciar suas notas de maneira rápida e eficaz.
+## Directory Structure
 
-## Funcionalidades Principais
+- **src/controllers**: Controllers for data manipulation (Notes, Tags, Sessions, User Avatar, User).
+- **src/database**: Configurations and scripts related to the database (Knex and SQLite).
+- **src/configs, src/middleware, src/providers, src/routes, src/utils**: Various configurations and utilities for the project.
+- **src/uploads**: Location for storing uploads (user avatars, for example).
+- **src/tmp**: Temporary folder for storing temporary files.
 
-- **Criação de Notas**: Crie facilmente novas notas com um editor de texto simples e amigável.
-- **Organização**: Classifique e agrupe suas notas para fácil acesso.
+## Technologies Used
 
+- **Express**: Web framework for Node.js.
+- **Knex**: SQL query builder.
+- **SQLite and SQLite3**: Database used for local storage.
+- **Axios, Bcryptjs, Cors, Jsonwebtoken, Multer**: Packages for various functionalities (HTTP requests, encryption, CORS control, authentication, file manipulation).
 
-## Tecnologias Utilizadas
+## API Endpoints
 
-- **React e React-DOM**: Biblioteca para construção de interfaces de usuário.
-- **Vite**: Framework para o desenvolvimento rápido de projetos React.
-- **Styled-Components**: Biblioteca para estilização de componentes React.
-- **Axios**: Cliente HTTP para fazer requisições à API.
-- **Eslint**: Ferramenta para identificação e correção de padrões de código.
-- **@types/react e @types/react-dom**: Tipagens para React.
-- **react-icons**: Biblioteca de ícones para React.
-- **react-router-dom**: Roteamento para navegação entre páginas.
+- **/api/signin**: Route for user authentication.
+- **/api/signup**: Route for user registration.
+- **/api/notes**: Route for note manipulation.
+- **/api/tags**: Route for tag manipulation.
+- **/api/profile/avatar**: Route for user avatar manipulation.
+- **/api/profile**: Route for user profile information.
 
+## Contribution
 
-## Estrutura de Diretórios
+Contributions are welcome! Feel free to open issues and pull requests.
 
-- **src/components**: Componentes React reutilizáveis.
-- **src/pages**: Páginas principais da aplicação.
-- **src/routes.jsx**: Configuração de rotas para usuário autenticado e não autenticado.
-- **src/services**: Serviços como Axios para interação com a API.
-- **src/styles**: Estilos globais e temas.
+## License
 
-## Páginas do Projeto
-
-- **Signin**: Página de login.
-- **Signup**: Página de cadastro.
-- **Home**: Página principal exibindo as notas.
-- **Details**: Página com detalhes da nota criada.
-- **New**: Página para a criação de uma nova nota.
-- **Profile**: Página de perfil do usuário.
-
-## Rotas
-
-As rotas estão definidas no arquivo `src/routes.jsx`. Há rotas específicas para usuários autenticados e não autenticados.
-
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
-
-
-
+This project is licensed under the ISC License. See the LICENSE.md file for more details.
